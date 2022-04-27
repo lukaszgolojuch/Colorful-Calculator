@@ -49,6 +49,11 @@ struct ContentView: View {
         [.one, .two, .three, .add],
         [.zero, .decimal, .equal]
     ]
+    
+    @State var actualValue: Double = 0
+    @State var valueInString: String = "0"
+    @State var typingIsFinished: Bool = true
+    @State var decimalTapped: Bool = false
 
     var body: some View {
         ZStack{
@@ -57,9 +62,9 @@ struct ContentView: View {
                 Spacer()
                 HStack{
                     Spacer()
-                    Text("0")
+                    Text(String(actualValue))
                         .bold()
-                        .font(.system(size: 52))
+                        .font(.system(size: 75))
                         .foregroundColor(.white)
                 }
                 .padding()
@@ -68,7 +73,7 @@ struct ContentView: View {
                     HStack{
                         ForEach(row, id: \.self) {object in
                             Button(action: {
-                                print("Done")
+                                buttonHasBeenTapped(selectedButton: object)
                             }) {
                                 Text(object.rawValue)
                                     .font(.system(size: 32))
@@ -95,6 +100,52 @@ struct ContentView: View {
     
     func getHeight(selectedButton: Buttons) -> CGFloat {
         return (UIScreen.main.bounds.width - (5*12)) / 4
+    }
+    
+    func buttonHasBeenTapped(selectedButton: Buttons){
+        switch selectedButton {
+        case .one,
+                .two,
+                .three,
+                .four,
+                .five,
+                .six,
+                .seven,
+                .eight,
+                .nine,
+                .zero:
+            
+            if typingIsFinished {
+//                valueInString = String((floor(Double(selectedButton.rawValue)!)))
+//                actualValue = Double(valueInString)!
+                actualValue = floor(Double(selectedButton.rawValue)!)
+            }
+            else{
+                valueInString += String((floor(Double(selectedButton.rawValue)!)))
+                actualValue = Double(valueInString)!
+            }
+        case .add:
+            print("Add button tapped")
+        case .substract:
+            print("Substract button tapped")
+        case .divide:
+            print("Divide button tapped")
+        case .multiply:
+            print("Multiply button tapped")
+        case .equal:
+            print("=")
+        case .clear:
+            actualValue = 0.0
+        case .decimal:
+            if !typingIsFinished {
+                valueInString += ".0"
+                actualValue = Double(valueInString)!
+            }
+        case .percent:
+            actualValue = actualValue * 0.01
+        case .negative:
+            actualValue = -actualValue
+        }
     }
 }
 
