@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		898599442821AE9500BFB90A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898599432821AE9500BFB90A /* SettingsView.swift */; };
 		8991EFA5280C9238004E314A /* Colorful_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8991EFA4280C9238004E314A /* Colorful_CalculatorApp.swift */; };
 		8991EFA7280C9238004E314A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8991EFA6280C9238004E314A /* ContentView.swift */; };
 		8991EFA9280C923B004E314A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8991EFA8280C923B004E314A /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		898599432821AE9500BFB90A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8991EFA1280C9238004E314A /* Colorful Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Colorful Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8991EFA4280C9238004E314A /* Colorful_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorful_CalculatorApp.swift; sourceTree = "<group>"; };
 		8991EFA6280C9238004E314A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				8991EFA6280C9238004E314A /* ContentView.swift */,
+				898599432821AE9500BFB90A /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				89BB827F281B1E950049B466 /* Buttons.swift in Sources */,
 				8991EFA7280C9238004E314A /* ContentView.swift in Sources */,
 				8991EFA5280C9238004E314A /* Colorful_CalculatorApp.swift in Sources */,
+				898599442821AE9500BFB90A /* SettingsView.swift in Sources */,
 				89BB8284281B1FDD0049B466 /* Calculations.swift in Sources */,
 				89BB8281281B1F690049B466 /* Operations.swift in Sources */,
 			);
