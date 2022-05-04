@@ -19,10 +19,9 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationView{
-            //Color.black.ignoresSafeArea(.all)
             ZStack{
                 List {
-                  Section(header: Text("Buttons Colours")) {
+                  Section(header: Text("Buttons Colour")) {
                     ColorPicker("Number buttons colour", selection: $numberBtnColour)
                     ColorPicker("Right column button", selection: $rightColumnBtnColour)
                     ColorPicker("Top row button", selection: $topRowBtnColour)
@@ -31,7 +30,22 @@ struct SettingsView: View {
                   
                   Section(header: Text("Buttons shape")) {
                       Text("Circle degree \(Int(degree))")
-                      Slider(value: $degree, in: 0...90, step: 1)
+                      Slider(value: $degree, in: 0...45, step: 1)
+                      HStack{
+                          Spacer()
+                          Button(action: {
+                          }) {
+                              Text("9")
+                                  .font(.system(size: 32))
+                                  .frame(
+                                    width: getWidth(selectedButton: .nine),
+                                    height: getHeight(selectedButton: .nine))
+                                  .background(.blue)
+                                  .foregroundColor(.white)
+                                  .cornerRadius(degree)
+                          }
+                          Spacer()
+                      }
                   }
                   .listSectionSeparatorTint(.red)
                 }
@@ -40,6 +54,17 @@ struct SettingsView: View {
             .navigationTitle("Calculator settings")
             .navigationBarTitleDisplayMode(.inline)
         }
+    }
+    
+    func getWidth(selectedButton: Buttons) -> CGFloat {
+        if selectedButton == Buttons.zero {
+            return ((UIScreen.main.bounds.width - (5*12)) / 4) * 2
+        }
+        return (UIScreen.main.bounds.width - (5*12)) / 4
+    }
+    
+    func getHeight(selectedButton: Buttons) -> CGFloat {
+        return (UIScreen.main.bounds.width - (5*12)) / 4
     }
 }
 

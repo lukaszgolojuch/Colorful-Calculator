@@ -20,36 +20,45 @@ struct ContentView: View {
     @State var calculations = Calculations()
     
     var body: some View {
-        ZStack{
-            Color.black.edgesIgnoringSafeArea(.all)
-            VStack{
-                Spacer()
-                HStack{
+        NavigationView{
+            ZStack{
+                Color.black.edgesIgnoringSafeArea(.all)
+                VStack{
                     Spacer()
-                    Text(calculations.valueInString)
-                        .bold()
-                        .font(.system(size: 75))
-                        .foregroundColor(.white)
-                }
-                .padding()
-                
-                ForEach(buttons, id: \.self) { row in
                     HStack{
-                        ForEach(row, id: \.self) {object in
-                            Button(action: {
-                                calculations.buttonHasBeenTapped(selectedButton: object)
-                            }) {
-                                Text(object.rawValue)
-                                    .font(.system(size: 32))
-                                    .frame(
-                                        width: getWidth(selectedButton: object),
-                                        height: getHeight(selectedButton: object))
-                                    .background(object.colorOfButton)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(90)
+                        Spacer()
+                        Text(calculations.valueInString)
+                            .bold()
+                            .font(.system(size: 75))
+                            .foregroundColor(.white)
+                    }
+                    .padding()
+                    
+                    ForEach(buttons, id: \.self) { row in
+                        HStack{
+                            ForEach(row, id: \.self) {object in
+                                Button(action: {
+                                    calculations.buttonHasBeenTapped(selectedButton: object)
+                                }) {
+                                    Text(object.rawValue)
+                                        .font(.system(size: 32))
+                                        .frame(
+                                            width: getWidth(selectedButton: object),
+                                            height: getHeight(selectedButton: object))
+                                        .background(object.colorOfButton)
+                                        .foregroundColor(.white)
+                                        .cornerRadius(90)
+                                }
                             }
                         }
                     }
+                }
+            }
+            .toolbar {
+                NavigationLink(destination: SettingsView()) {
+                    Image(systemName: "gear")
+                        .background(.black)
+                        .foregroundColor(.white)
                 }
             }
         }
