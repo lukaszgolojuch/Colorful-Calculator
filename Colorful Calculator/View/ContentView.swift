@@ -6,9 +6,9 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ContentView: View {
-    
     let buttons: [[Buttons]] = [
         [.clear, .negative, .percent, .divide],
         [.seven, .eight, .nine, .multiply],
@@ -18,6 +18,8 @@ struct ContentView: View {
     ]
 
     @State var calculations = Calculations()
+    
+    let realmDBController = RealmDBController()
     
     var body: some View {
         NavigationView{
@@ -45,9 +47,9 @@ struct ContentView: View {
                                         .frame(
                                             width: getWidth(selectedButton: object),
                                             height: getHeight(selectedButton: object))
-                                        .background(object.colorOfButton)
+                                        .background(Color(object.colorOfButton))
                                         .foregroundColor(.white)
-                                        .cornerRadius(90)
+                                        .cornerRadius(realmDBController.loadButtonRadiusFromRealmDB())
                                 }
                             }
                         }

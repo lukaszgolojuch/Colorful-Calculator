@@ -7,6 +7,11 @@
 
 import Foundation
 import SwiftUI
+import RealmSwift
+
+let realm = try! Realm()
+
+let realmDBController = RealmDBController()
 
 enum Buttons: String {
     case one = "1"
@@ -29,14 +34,14 @@ enum Buttons: String {
     case percent = "%"
     case negative = "-/+"
     
-    var colorOfButton: Color{
+    var colorOfButton: UIColor{
         switch self{
         case .add, .substract, .divide, .multiply, .equal:
-            return .orange
+            return realmDBController.getRightColumnBtnUIColour()
         case .clear, .negative, .percent:
-            return Color(.lightGray)
+            return realmDBController.getTopRowBtnUIColour()
         default:
-            return .cyan
+            return realmDBController.getNumberBtnUIColour()
         }
     }
 }

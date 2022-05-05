@@ -15,9 +15,13 @@
 		89BB827F281B1E950049B466 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB827E281B1E950049B466 /* Buttons.swift */; };
 		89BB8281281B1F690049B466 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB8280281B1F690049B466 /* Operations.swift */; };
 		89BB8284281B1FDD0049B466 /* Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB8283281B1FDD0049B466 /* Calculations.swift */; };
+		89C032B5282438E300B39D08 /* ButtonsDataRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C032B4282438E300B39D08 /* ButtonsDataRealm.swift */; };
+		89C032B72824692300B39D08 /* RealmDBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C032B62824692300B39D08 /* RealmDBController.swift */; };
+		8AEE34C1CA8869C7960CE52A /* Pods_Colorful_Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9401772B6F6E6F7C9CEBDE5B /* Pods_Colorful_Calculator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		562CC0B1A55CE5F8E89BE17B /* Pods-Colorful Calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colorful Calculator.debug.xcconfig"; path = "Target Support Files/Pods-Colorful Calculator/Pods-Colorful Calculator.debug.xcconfig"; sourceTree = "<group>"; };
 		898599432821AE9500BFB90A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8991EFA1280C9238004E314A /* Colorful Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Colorful Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8991EFA4280C9238004E314A /* Colorful_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorful_CalculatorApp.swift; sourceTree = "<group>"; };
@@ -27,6 +31,10 @@
 		89BB827E281B1E950049B466 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		89BB8280281B1F690049B466 /* Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
 		89BB8283281B1FDD0049B466 /* Calculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculations.swift; sourceTree = "<group>"; };
+		89C032B4282438E300B39D08 /* ButtonsDataRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsDataRealm.swift; sourceTree = "<group>"; };
+		89C032B62824692300B39D08 /* RealmDBController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDBController.swift; sourceTree = "<group>"; };
+		9401772B6F6E6F7C9CEBDE5B /* Pods_Colorful_Calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Colorful_Calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9CAA48AED1DF98A95764A94 /* Pods-Colorful Calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colorful Calculator.release.xcconfig"; path = "Target Support Files/Pods-Colorful Calculator/Pods-Colorful Calculator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AEE34C1CA8869C7960CE52A /* Pods_Colorful_Calculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +54,8 @@
 			children = (
 				8991EFA3280C9238004E314A /* Colorful Calculator */,
 				8991EFA2280C9238004E314A /* Products */,
+				CC79BE647FC0C2EE70B66AF1 /* Pods */,
+				B7EAA1446EA5645AAA246D02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +93,7 @@
 			children = (
 				89BB827E281B1E950049B466 /* Buttons.swift */,
 				89BB8280281B1F690049B466 /* Operations.swift */,
+				89C032B4282438E300B39D08 /* ButtonsDataRealm.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -90,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				89BB8283281B1FDD0049B466 /* Calculations.swift */,
+				89C032B62824692300B39D08 /* RealmDBController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -103,6 +116,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B7EAA1446EA5645AAA246D02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9401772B6F6E6F7C9CEBDE5B /* Pods_Colorful_Calculator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC79BE647FC0C2EE70B66AF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				562CC0B1A55CE5F8E89BE17B /* Pods-Colorful Calculator.debug.xcconfig */,
+				D9CAA48AED1DF98A95764A94 /* Pods-Colorful Calculator.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8991EFAF280C923B004E314A /* Build configuration list for PBXNativeTarget "Colorful Calculator" */;
 			buildPhases = (
+				8F9BF36E84CFA5721CCBCBE7 /* [CP] Check Pods Manifest.lock */,
 				8991EF9D280C9238004E314A /* Sources */,
 				8991EF9E280C9238004E314A /* Frameworks */,
 				8991EF9F280C9238004E314A /* Resources */,
+				406AA68CFC170E1C8138BB7B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,6 +200,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		406AA68CFC170E1C8138BB7B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Colorful Calculator/Pods-Colorful Calculator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Colorful Calculator/Pods-Colorful Calculator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Colorful Calculator/Pods-Colorful Calculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F9BF36E84CFA5721CCBCBE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Colorful Calculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8991EF9D280C9238004E314A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -178,6 +252,8 @@
 				8991EFA5280C9238004E314A /* Colorful_CalculatorApp.swift in Sources */,
 				898599442821AE9500BFB90A /* SettingsView.swift in Sources */,
 				89BB8284281B1FDD0049B466 /* Calculations.swift in Sources */,
+				89C032B72824692300B39D08 /* RealmDBController.swift in Sources */,
+				89C032B5282438E300B39D08 /* ButtonsDataRealm.swift in Sources */,
 				89BB8281281B1F690049B466 /* Operations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +377,7 @@
 		};
 		8991EFB0280C923B004E314A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 562CC0B1A55CE5F8E89BE17B /* Pods-Colorful Calculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -330,6 +407,7 @@
 		};
 		8991EFB1280C923B004E314A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9CAA48AED1DF98A95764A94 /* Pods-Colorful Calculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
