@@ -17,6 +17,7 @@
 		89BB8284281B1FDD0049B466 /* Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB8283281B1FDD0049B466 /* Calculations.swift */; };
 		89C032B5282438E300B39D08 /* ButtonsDataRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C032B4282438E300B39D08 /* ButtonsDataRealm.swift */; };
 		89C032B72824692300B39D08 /* RealmDBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C032B62824692300B39D08 /* RealmDBController.swift */; };
+		89F624DF282708FE0070C8A8 /* ButtonSeizure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F624DE282708FE0070C8A8 /* ButtonSeizure.swift */; };
 		8AEE34C1CA8869C7960CE52A /* Pods_Colorful_Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9401772B6F6E6F7C9CEBDE5B /* Pods_Colorful_Calculator.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		89BB8283281B1FDD0049B466 /* Calculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculations.swift; sourceTree = "<group>"; };
 		89C032B4282438E300B39D08 /* ButtonsDataRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsDataRealm.swift; sourceTree = "<group>"; };
 		89C032B62824692300B39D08 /* RealmDBController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDBController.swift; sourceTree = "<group>"; };
+		89F624DE282708FE0070C8A8 /* ButtonSeizure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSeizure.swift; sourceTree = "<group>"; };
 		9401772B6F6E6F7C9CEBDE5B /* Pods_Colorful_Calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Colorful_Calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9CAA48AED1DF98A95764A94 /* Pods-Colorful Calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colorful Calculator.release.xcconfig"; path = "Target Support Files/Pods-Colorful Calculator/Pods-Colorful Calculator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 			children = (
 				89BB827E281B1E950049B466 /* Buttons.swift */,
 				89BB8280281B1F690049B466 /* Operations.swift */,
+				89F624DE282708FE0070C8A8 /* ButtonSeizure.swift */,
 				89C032B4282438E300B39D08 /* ButtonsDataRealm.swift */,
 			);
 			path = Model;
@@ -250,6 +253,7 @@
 				89BB827F281B1E950049B466 /* Buttons.swift in Sources */,
 				8991EFA7280C9238004E314A /* ContentView.swift in Sources */,
 				8991EFA5280C9238004E314A /* Colorful_CalculatorApp.swift in Sources */,
+				89F624DF282708FE0070C8A8 /* ButtonSeizure.swift in Sources */,
 				898599442821AE9500BFB90A /* SettingsView.swift in Sources */,
 				89BB8284281B1FDD0049B466 /* Calculations.swift in Sources */,
 				89C032B72824692300B39D08 /* RealmDBController.swift in Sources */,

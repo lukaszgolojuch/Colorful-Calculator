@@ -10,10 +10,9 @@ import SwiftUI
 import RealmSwift
 
 let realm = try! Realm()
-
 let realmDBController = RealmDBController()
 
-enum Buttons: String {
+enum Buttons: String{
     case one = "1"
     case two = "2"
     case three = "3"

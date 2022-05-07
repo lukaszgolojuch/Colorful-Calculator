@@ -18,9 +18,9 @@ struct ContentView: View {
     ]
 
     @State var calculations = Calculations()
-    
     let realmDBController = RealmDBController()
-    
+    let buttonSeizure = ButtonSeizure()
+
     var body: some View {
         NavigationView{
             ZStack{
@@ -40,13 +40,14 @@ struct ContentView: View {
                         HStack{
                             ForEach(row, id: \.self) {object in
                                 Button(action: {
+                                    print(Realm.Configuration.defaultConfiguration.fileURL!)
                                     calculations.buttonHasBeenTapped(selectedButton: object)
                                 }) {
                                     Text(object.rawValue)
                                         .font(.system(size: 32))
                                         .frame(
-                                            width: getWidth(selectedButton: object),
-                                            height: getHeight(selectedButton: object))
+                                            width: buttonSeizure.getWidth(selectedButton: object),
+                                            height: buttonSeizure.getHeight(selectedButton: object))
                                         .background(Color(object.colorOfButton))
                                         .foregroundColor(.white)
                                         .cornerRadius(realmDBController.loadButtonRadiusFromRealmDB())
@@ -64,17 +65,6 @@ struct ContentView: View {
                 }
             }
         }
-    }
-    
-    func getWidth(selectedButton: Buttons) -> CGFloat {
-        if selectedButton == Buttons.zero {
-            return ((UIScreen.main.bounds.width - (5*12)) / 4) * 2
-        }
-        return (UIScreen.main.bounds.width - (5*12)) / 4
-    }
-    
-    func getHeight(selectedButton: Buttons) -> CGFloat {
-        return (UIScreen.main.bounds.width - (5*12)) / 4
     }
 }
 
