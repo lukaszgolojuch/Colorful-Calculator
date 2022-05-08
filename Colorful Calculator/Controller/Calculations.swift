@@ -52,29 +52,28 @@ struct Calculations {
     }
     
     mutating func corePerformanceForActionButtons(){
-        decimalTapped = true
         storedValue = Double(valueInString)!
         valueInString = "0"
     }
     
     mutating func add(){
         corePerformanceForActionButtons()
-        storedValue = Double(valueInString)!
+        currentOperation = .add
     }
     
     mutating func substract(){
         corePerformanceForActionButtons()
-        storedValue = Double(valueInString)!
+        currentOperation = .substract
     }
     
     mutating func multiply(){
         corePerformanceForActionButtons()
-        storedValue = Double(valueInString)!
+        currentOperation = .multiply
     }
     
     mutating func divide(){
         corePerformanceForActionButtons()
-        storedValue = Double(valueInString)!
+        currentOperation = .divide
     }
     
     mutating func number(for selectedButton: Buttons){

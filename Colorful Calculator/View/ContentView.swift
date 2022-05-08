@@ -40,7 +40,6 @@ struct ContentView: View {
                         HStack{
                             ForEach(row, id: \.self) {object in
                                 Button(action: {
-                                    print(Realm.Configuration.defaultConfiguration.fileURL!)
                                     calculations.buttonHasBeenTapped(selectedButton: object)
                                 }) {
                                     Text(object.rawValue)
