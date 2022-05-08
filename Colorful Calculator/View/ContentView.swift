@@ -29,7 +29,7 @@ struct ContentView: View {
                     Spacer()
                     HStack{
                         Spacer()
-                        Text(calculations.valueInString)
+                        Text(calculations.getValueForPrint())
                             .bold()
                             .font(.system(size: 75))
                             .foregroundColor(.white)

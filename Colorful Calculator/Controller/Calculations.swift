@@ -17,6 +17,16 @@ struct Calculations {
     var decimalTapped: Bool = false //true for decimal values, false for integer
     var currentOperation: Operations = .none
     
+    func getValueForPrint() -> String{
+        if decimalTapped {
+            return valueInString
+        }
+        else {
+            let value: Int = Int(floor(Double(valueInString) ?? 5))
+            return String(value)
+        }
+    }
+    
     mutating func buttonHasBeenTapped(selectedButton: Buttons){
         switch selectedButton {
         case .one,
@@ -87,16 +97,25 @@ struct Calculations {
     
     mutating func equal(){
         actualValue = Double(valueInString)!
+        var result: Double
         
         switch currentOperation {
         case .add:
-            valueInString = String(storedValue + actualValue)
+            result = storedValue + actualValue
+            valueInString = String(result)
         case .substract:
-            valueInString = String(storedValue - actualValue)
+            result = storedValue - actualValue
+            valueInString = String(result)
         case .divide:
-            valueInString = String(storedValue / actualValue)
+            if storedValue.truncatingRemainder(dividingBy: actualValue) != 0{
+                //Set decimal if modulo does not equal 0
+                decimalTapped = true
+            }
+            result = storedValue / actualValue
+            valueInString = String(result)
         case .multiply:
-            valueInString = String(storedValue * actualValue)
+            result = storedValue * actualValue
+            valueInString = String(result)
         case .none:
             break
         }
