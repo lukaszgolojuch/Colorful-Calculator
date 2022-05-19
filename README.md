@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/lukaszgolojuch/Colorful-Calculator">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Colorful Calculator</h3>
@@ -45,8 +45,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-[![Product Name Screen Shot][product-screenshot2]](https://example.com)
+<img src="screenshot.png" alt="Logo" width="270" height="585">
+<img src="screenshot2.png" alt="Logo" width="270" height="585">
 
 Project is SwiftUI + Swift implementation of basic iOS calculator with additional features, that can make it better.
 
@@ -116,8 +116,6 @@ To save configuation tap save configuration and go back to calculations (use but
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -156,5 +154,3 @@ Project Link: [https://github.com/lukaszgolojuch/Colorful-Calculator](https://gi
 <!-- MARKDOWN LINKS & IMAGES -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/lukasz-golojuch/
-[product-screenshot]: images/screenshot.png
-[product-screenshot2]: images/screenshot2.png
