@@ -11,6 +11,7 @@ import RealmSwift
 struct RealmDBController {
     let realm = try! Realm()
         
+    //MARK: - first database inicialisation
     func checkAndCreateDBIfEmpty(){
         if realm.isEmpty {
             let btn = RealmButtonData()
@@ -20,6 +21,7 @@ struct RealmDBController {
         }
     }
 
+    //MARK: - getting data from Realm Database
     func loadButtonRadiusFromRealmDB() -> Double{
         checkAndCreateDBIfEmpty()
 
@@ -80,6 +82,7 @@ struct RealmDBController {
             )
     }
     
+    //MARK: - saving data into Realm Database
     func saveConfigurationIntoRealm(numberBtnUIColor: UIColor, rightColumnBtnUIColor: UIColor, topRowBtnUIColor: UIColor, degree: Double){
         let btn = RealmButtonData()
         btn.radius = degree

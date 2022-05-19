@@ -66,6 +66,7 @@ struct Calculations {
         valueInString = "0"
     }
     
+    //MARK: - calculations methods
     mutating func add(){
         corePerformanceForActionButtons()
         currentOperation = .add
@@ -84,15 +85,6 @@ struct Calculations {
     mutating func divide(){
         corePerformanceForActionButtons()
         currentOperation = .divide
-    }
-    
-    mutating func number(for selectedButton: Buttons){
-        if self.valueInString == "0" {
-            valueInString = selectedButton.rawValue
-        }
-        else {
-            valueInString += selectedButton.rawValue
-        }
     }
     
     mutating func equal(){
@@ -121,6 +113,7 @@ struct Calculations {
         }
     }
     
+    //MARK: - functional methods
     mutating func clear(){
         decimalTapped = false
         valueInString = "0"
@@ -146,6 +139,16 @@ struct Calculations {
         }
         else {
             valueInString = String(-doubleValue!)
+        }
+    }
+    
+    //MARK: - number method
+    mutating func number(for selectedButton: Buttons){
+        if self.valueInString == "0" {
+            valueInString = selectedButton.rawValue
+        }
+        else {
+            valueInString += selectedButton.rawValue
         }
     }
 }
