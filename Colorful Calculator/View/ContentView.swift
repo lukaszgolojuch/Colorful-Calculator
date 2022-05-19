@@ -56,6 +56,10 @@ struct ContentView: View {
                     }
                 }
             }
+            .onAppear(){
+                calculations.valueInString = "Changing color..."
+                calculations.buttonHasBeenTapped(selectedButton: .clear)
+            }
             .toolbar {
                 NavigationLink(destination: SettingsView()) {
                     Image(systemName: "gear")
