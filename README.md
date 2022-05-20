@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/lukaszgolojuch/Colorful-Calculator">
-    <img src="logo.png" alt="Logo" width="80" height="80">
+    <img src="Images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Colorful Calculator</h3>
@@ -45,8 +45,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="screenshot.png" alt="Logo" width="270" height="585">
-<img src="screenshot2.png" alt="Logo" width="270" height="585">
+<img src="Images/screenshot.png" alt="Logo" width="270" height="585">
+<img src="Images/screenshot2.png" alt="Logo" width="270" height="585">
 
 Project is SwiftUI + Swift implementation of basic iOS calculator with additional features, that can make it better.
 
